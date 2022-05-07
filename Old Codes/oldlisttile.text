@@ -1,0 +1,383 @@
+Widget OldListTiles(BuildContext context) {
+    return (
+  
+               
+              
+
+              ListTile(
+                dense: true,
+                leading: Image.asset(
+                  "assets/categoryicons/babyitems.png",
+                  height: 26,
+                ),
+                title: Text("Baby Items"),
+                trailing: Icon(
+                  Ionicons.chevron_forward_sharp,
+                  size: 15.5,
+                  color: ashcolor,
+                ),
+                onTap: () {
+                  setpref(16);
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => CategoryProductsScreen(
+                                pid: 18,
+                              )));
+                },
+              ),
+
+              ListTile(
+                dense: true,
+                leading: Image.asset(
+                  "assets/categoryicons/bodyspray.png",
+                  height: 26,
+                ),
+                title: Text("Body Spray"),
+                trailing: Icon(
+                  Ionicons.chevron_forward_sharp,
+                  size: 15.5,
+                  color: ashcolor,
+                ),
+                onTap: () {
+                  setpref(18);
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => CategoryProductsScreen(
+                                pid: 18,
+                              )));
+                },
+              ),
+
+              ListTile(
+                dense: true,
+                leading: Image.asset(
+                  "assets/categoryicons/bodywash.png",
+                  height: 26,
+                ),
+                title: Text("Body Wash"),
+                trailing: Icon(
+                  Ionicons.chevron_forward_sharp,
+                  size: 15.5,
+                  color: ashcolor,
+                ),
+                onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => CategoryProductsScreen(
+                              pid: 21,
+                            ))),
+              ),
+
+              ListTile(
+                dense: true,
+                leading: Image.asset(
+                  "assets/categoryicons/cream.png",
+                  height: 26,
+                ),
+                title: Text("Cream/Fairness Cream"),
+                trailing: Icon(
+                  Ionicons.chevron_forward_sharp,
+                  size: 15.5,
+                  color: ashcolor,
+                ),
+                onTap: () => Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => HomeScreen())),
+              ),
+
+              ListTile(
+                dense: true,
+                leading: Image.asset(
+                  "assets/categoryicons/diaper.png",
+                  height: 26,
+                ),
+                title: Text("Diaper"),
+                trailing: Icon(
+                  Ionicons.chevron_forward_sharp,
+                  size: 15.5,
+                  color: ashcolor,
+                ),
+                onTap: () => Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => HomeScreen())),
+              ),
+
+              ListTile(
+                dense: true,
+                leading: Image.asset(
+                  "assets/categoryicons/facewash.png",
+                  height: 26,
+                ),
+                title: Text("Face Wash"),
+                trailing: Icon(
+                  Ionicons.chevron_forward_sharp,
+                  size: 15.5,
+                  color: ashcolor,
+                ),
+                onTap: () => Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => HomeScreen())),
+              ),
+
+              ListTile(
+                dense: true,
+                leading: Image.asset(
+                  "assets/categoryicons/foundation.png",
+                  height: 26,
+                ),
+                title: Text("Foundations"),
+                trailing: Icon(
+                  Ionicons.chevron_forward_sharp,
+                  size: 15.5,
+                  color: ashcolor,
+                ),
+                onTap: () => Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => HomeScreen())),
+              ),
+
+              ListTile(
+                dense: true,
+                leading: Image.asset(
+                  "assets/categoryicons/hairitems.png",
+                  height: 26,
+                ),
+                title: Text("Hair Items"),
+                trailing: Icon(
+                  Ionicons.chevron_forward_sharp,
+                  size: 15.5,
+                  color: ashcolor,
+                ),
+                onTap: () => Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => HomeScreen())),
+              ),
+
+              ListTile(
+                dense: true,
+                leading: Image.asset(
+                  "assets/categoryicons/babyitems.png",
+                  height: 26,
+                ),
+                title: Text("Kajal"),
+                trailing: Icon(
+                  Ionicons.chevron_forward_sharp,
+                  size: 15.5,
+                  color: ashcolor,
+                ),
+                onTap: () => Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => HomeScreen())),
+              ),
+
+              ListTile(
+                dense: true,
+                leading: Image.asset(
+                  "assets/categoryicons/lotion.png",
+                  height: 26,
+                ),
+                title: Text("Lotion"),
+                trailing: Icon(
+                  Ionicons.chevron_forward_sharp,
+                  size: 15.5,
+                  color: ashcolor,
+                ),
+                onTap: () => Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => HomeScreen())),
+              ),
+
+              ListTile(
+                dense: true,
+                leading: Image.asset(
+                  "assets/categoryicons/babyitems.png",
+                  height: 26,
+                ),
+                title: Text("Oil"),
+                trailing: Icon(
+                  Ionicons.chevron_forward_sharp,
+                  size: 15.5,
+                  color: ashcolor,
+                ),
+                onTap: () => Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => HomeScreen())),
+              ),
+
+              ListTile(
+                dense: true,
+                leading: Image.asset(
+                  "assets/categoryicons/pastebrush.png",
+                  height: 26,
+                ),
+                title: Text("Paste/Brush"),
+                trailing: Icon(
+                  Ionicons.chevron_forward_sharp,
+                  size: 15.5,
+                  color: ashcolor,
+                ),
+                onTap: () => Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => HomeScreen())),
+              ),
+
+              ListTile(
+                dense: true,
+                leading: Image.asset(
+                  "assets/categoryicons/perfume.png",
+                  height: 26,
+                ),
+                title: Text("Perfume"),
+                trailing: Icon(
+                  Ionicons.chevron_forward_sharp,
+                  size: 15.5,
+                  color: ashcolor,
+                ),
+                onTap: () => Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => HomeScreen())),
+              ),
+
+              ListTile(
+                dense: true,
+                leading: Image.asset(
+                  "assets/categoryicons/powder.png",
+                  height: 26,
+                ),
+                title: Text("Powder"),
+                trailing: Icon(
+                  Ionicons.chevron_forward_sharp,
+                  size: 15.5,
+                  color: ashcolor,
+                ),
+                onTap: () => Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => HomeScreen())),
+              ),
+
+              ListTile(
+                dense: true,
+                leading: Image.asset(
+                  "assets/categoryicons/rollon.png",
+                  height: 26,
+                ),
+                title: Text("Rollon"),
+                trailing: Icon(
+                  Ionicons.chevron_forward_sharp,
+                  size: 15.5,
+                  color: ashcolor,
+                ),
+                onTap: () => Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => HomeScreen())),
+              ),
+
+              ListTile(
+                dense: true,
+                leading: Image.asset(
+                  "assets/categoryicons/babyitems.png",
+                  height: 26,
+                ),
+                title: Text("Scent"),
+                trailing: Icon(
+                  Ionicons.chevron_forward_sharp,
+                  size: 15.5,
+                  color: ashcolor,
+                ),
+                onTap: () => Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => HomeScreen())),
+              ),
+
+              ListTile(
+                dense: true,
+                leading: Image.asset(
+                  "assets/categoryicons/shampoo_conditioner.png",
+                  height: 26,
+                ),
+                title: Text("Shampoo/Conditioner"),
+                trailing: Icon(
+                  Ionicons.chevron_forward_sharp,
+                  size: 15.5,
+                  color: ashcolor,
+                ),
+                onTap: () => Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => HomeScreen())),
+              ),
+
+              ListTile(
+                dense: true,
+                leading: Image.asset(
+                  "assets/categoryicons/shaving.png",
+                  height: 26,
+                ),
+                title: Text("Shaving"),
+                trailing: Icon(
+                  Ionicons.chevron_forward_sharp,
+                  size: 15.5,
+                  color: ashcolor,
+                ),
+                onTap: () => Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => HomeScreen())),
+              ),
+
+              ListTile(
+                dense: true,
+                leading: Image.asset(
+                  "assets/categoryicons/soap.png",
+                  height: 26,
+                ),
+                title: Text("Soap"),
+                trailing: Icon(
+                  Ionicons.chevron_forward_sharp,
+                  size: 15.5,
+                  color: ashcolor,
+                ),
+                onTap: () => Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => HomeScreen())),
+              ),
+
+              ListTile(
+                dense: true,
+                leading: Image.asset(
+                  "assets/categoryicons/babyitems.png",
+                  height: 26,
+                ),
+                title: Text("Others"),
+                trailing: Icon(
+                  Ionicons.chevron_forward_sharp,
+                  size: 15.5,
+                  color: ashcolor,
+                ),
+                onTap: () => Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => HomeScreen())),
+              ),
+
+              // ListView.builder(
+
+              //   shrinkWrap: true,
+
+              //   itemCount: 8,
+
+              //   itemBuilder: (context, index) {
+
+              //     return GestureDetector(
+
+              //       onTap: () {
+
+              //         Navigator.push(
+
+              //             context,
+
+              //             MaterialPageRoute(
+
+              //                 builder: (context) => SubCategoryScreen()));
+
+              //       },
+
+              //       child: ListTile(
+
+              //         leading: Icon(Ionicons.add),
+
+              //         title: Text("Category $index"),
+
+              //         trailing: Icon(Ionicons.chevron_forward),
+
+              //       ),
+
+              //     );
+
+              //   },
+
+              // )
+    );
+  }

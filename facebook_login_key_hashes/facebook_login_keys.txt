@@ -1,0 +1,5 @@
+COMMAND  :  C:\openssl\bin>keytool -exportcert -alias androiddebugkey -keystore "C:\Users\AR\.android\debug.keystore" | "C:\openssl\bin\openssl" sha1 -binary | "C:\openssl\bin\openssl" base64
+KEY  :  akGLOBIy68a9mf1UsmlWqoR+DWM=
+
+COMMAND :  C:\openssl\bin>keytool -exportcert -alias YOUR_RELEASE_KEY_ALIAS -keystore YOUR_RELEASE_KEY_PATH | openssl sha1 -binary | openssl base64
+KEY  :  eKJJHinr+D3pnrXYFuIJnPbO7ag=

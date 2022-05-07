@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Paikari Limited</string>
+    <string name="facebook_app_id">1042484413140956</string>
+    <string name="fb_login_protocol_scheme">fb1042484413140956</string>
+    <string name="facebook_client_token">b1a8023ded8bb9359272ff2244adcab4</string>
+</resources>
