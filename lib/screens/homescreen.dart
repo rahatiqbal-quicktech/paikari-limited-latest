@@ -80,50 +80,46 @@ class _HomeScreenState extends State<HomeScreen> {
       drawer: NavBarWidget(),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
-        child: Column(
+        child: Stack(
           children: [
-            Stack(
-              children: [
-                SizedBox(
-                  height: size.height * 85,
-                  child: Obx(() {
-                    return ListView.builder(
-                      scrollDirection: Axis.vertical,
-                      shrinkWrap: true,
-                      itemCount: allproducts_c.allrpoductslist_.length,
-                      itemBuilder: (context, index) {
-                        final abc = allproducts_c.allrpoductslist_[index];
+            SizedBox(
+              height: size.height * 86,
+              child: Obx(() {
+                return ListView.builder(
+                  scrollDirection: Axis.vertical,
+                  shrinkWrap: true,
+                  itemCount: allproducts_c.allrpoductslist_.length,
+                  itemBuilder: (context, index) {
+                    final abc = allproducts_c.allrpoductslist_[index];
 
-                        return allproducts_c.allrpoductslist_.isNotEmpty
-                            ? HomeScreenListTile(
-                                id: abc.id,
-                                productname: abc.name,
-                                price: abc.salePrice,
-                                oldprice: abc.price,
-                                imageurl: imagecheckfunction(index),
-                                q: getQuantity(abc.id),
-                              )
-                            : Center(
-                                child: CircularProgressIndicator(),
-                              );
-                      },
-                    );
-                  }),
-                ),
-                Provider.of<CartProvider>(context, listen: true).tprice != 0
-                    ? Positioned.fill(
-                        child: Align(
-                        alignment: Alignment.bottomCenter,
-                        child: GestureDetector(
-                          child: bottomContainer(size),
-                          onTap: () {
-                            Get.to(() => CartScreen());
-                          },
-                        ),
-                      ))
-                    : Container(),
-              ],
+                    return allproducts_c.allrpoductslist_.isNotEmpty
+                        ? HomeScreenListTile(
+                            id: abc.id,
+                            productname: abc.name,
+                            price: abc.salePrice,
+                            oldprice: abc.price,
+                            imageurl: imagecheckfunction(index),
+                            q: getQuantity(abc.id),
+                          )
+                        : Center(
+                            child: CircularProgressIndicator(),
+                          );
+                  },
+                );
+              }),
             ),
+            Provider.of<CartProvider>(context, listen: true).tprice != 0
+                ? Positioned.fill(
+                    child: Align(
+                    alignment: Alignment.bottomCenter,
+                    child: GestureDetector(
+                      child: bottomContainer(size),
+                      onTap: () {
+                        Get.to(() => CartScreen());
+                      },
+                    ),
+                  ))
+                : Container(),
           ],
         ),
       ),

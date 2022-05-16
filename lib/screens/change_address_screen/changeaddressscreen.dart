@@ -114,7 +114,8 @@ class _ChangeAddressScreenState extends State<ChangeAddressScreen> {
                         changeAddressCustomTextfield("Town/City*", "Town/City*",
                             cityController, TextInputType.streetAddress, true),
                         // Dropdown here
-                        selcectDistrictDropdown(),
+                        // selcectDistrictDropdown(),
+                        alternateDropdown(),
                         whitespace(context, 1.5, 0),
                         Divider(),
                         changeAddressCustomTextfield(
@@ -230,6 +231,45 @@ class _ChangeAddressScreenState extends State<ChangeAddressScreen> {
           }
           return null;
         },
+      ),
+    );
+  }
+
+  alternateDropdown() {
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: 10.0),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10.0),
+        border: Border.all(
+            color: Colors.grey, style: BorderStyle.solid, width: 0.80),
+      ),
+      child: DropdownButtonHideUnderline(
+        child: DropdownButton(
+          hint: _dropDownValue == null
+              ? Text('Dropdown')
+              : Text(
+                  _dropDownValue!,
+                  style: TextStyle(color: Colors.black),
+                ),
+          isExpanded: true,
+          iconSize: 30.0,
+          style: TextStyle(color: Colors.black),
+          items: districtsList.map(
+            (val) {
+              return DropdownMenuItem<String>(
+                value: val,
+                child: Text(val),
+              );
+            },
+          ).toList(),
+          onChanged: (String? val) {
+            setState(
+              () {
+                _dropDownValue = val;
+              },
+            );
+          },
+        ),
       ),
     );
   }

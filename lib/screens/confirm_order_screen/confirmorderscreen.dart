@@ -115,7 +115,7 @@ class _ConfirmOrderScreenState extends State<ConfirmOrderScreen> {
                                 "Change",
                                 style: GoogleFonts.openSans(
                                     color: Colors.grey.shade700),
-                              ))
+                              )),
                         ],
                       ),
                     ),
@@ -370,4 +370,17 @@ class _ConfirmOrderScreenState extends State<ConfirmOrderScreen> {
           tempLineItems: createOrderModelList,
           context: context);
   }
+}
+
+setShippingAddress() async {
+  final spref = await SharedPreferences.getInstance();
+
+  // fullShippingAddress = spref.getString('houseaddress').toString() +
+  //     " " +
+  //     spref.getString('roadaddress').toString() +
+  //     " " +
+  //     spref.getString('areaaddress').toString();
+
+  String fullShippingAddress = "${spref.getString('fullAddress')}";
+  print(" $fullShippingAddress ");
 }

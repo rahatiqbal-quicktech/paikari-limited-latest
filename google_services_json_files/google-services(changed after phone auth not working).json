@@ -29,13 +29,6 @@
             {
               "client_id": "909659062514-pvai9gftrrf4rt9ndm5sq09btd231ghc.apps.googleusercontent.com",
               "client_type": 3
-            },
-            {
-              "client_id": "909659062514-75cpclb9bp0a9seom8uhihei4aopdut0.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.quicktech.paikarilimitedquicktech"
-              }
             }
           ]
         }
@@ -65,13 +58,6 @@
             {
               "client_id": "909659062514-pvai9gftrrf4rt9ndm5sq09btd231ghc.apps.googleusercontent.com",
               "client_type": 3
-            },
-            {
-              "client_id": "909659062514-75cpclb9bp0a9seom8uhihei4aopdut0.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.quicktech.paikarilimitedquicktech"
-              }
             }
           ]
         }
@@ -109,13 +95,6 @@
             {
               "client_id": "909659062514-pvai9gftrrf4rt9ndm5sq09btd231ghc.apps.googleusercontent.com",
               "client_type": 3
-            },
-            {
-              "client_id": "909659062514-75cpclb9bp0a9seom8uhihei4aopdut0.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.quicktech.paikarilimitedquicktech"
-              }
             }
           ]
         }

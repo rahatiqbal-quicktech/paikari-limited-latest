@@ -63,22 +63,20 @@ class CreateOrderController {
         {"method_id": "flat_rate", "method_title": "Flat Rate", "total": "100"}
       ]
     };
+    print(cartdata.toString());
+
     String url = "https://paikarilimited.com/wp-json/wc/v3/orders";
     var auth = 'Basic ' +
         base64Encode(
           utf8.encode('$woocommerceusername:$woocommercepassword'),
         );
-
     try {
       final response = await dio.post(url,
           data: cartdata,
           options: Options(
             headers: <String, String>{'authorization': auth},
           ));
-
-      print("createorder response below = ");
-      // print(response);
-      log("$response");
+      print(response.data);
 
       if (response.statusCode == 201) {
         LoadingDialog().dismiss();
@@ -93,8 +91,8 @@ class CreateOrderController {
       }
     } catch (e) {
       LoadingDialog().dismiss();
-      print("Exception from create order " + e.toString());
       print("Failed try");
+      print(e);
     }
   }
 
@@ -130,9 +128,6 @@ class CreateOrderController {
       "line_items": tempLineItems,
       "shipping_lines": [
         {"method_id": "flat_rate", "method_title": "Flat Rate", "total": "100"}
-      ],
-      "coupon_lines": [
-        {"id": "", "code": ""}
       ]
     };
     String url = "https://paikarilimited.com/wp-json/wc/v3/orders";
@@ -166,8 +161,9 @@ class CreateOrderController {
       }
     } catch (e) {
       LoadingDialog().dismiss();
-      print("Exception from create order " + e.toString());
-      print("Failed try");
+      print("Exception from createOrderSslcommerz  " + e.toString());
+      log("Exception from createOrderSslcommerz  " + e.toString());
+      print("createOrderSslcommerz - Failed try");
     }
   }
 

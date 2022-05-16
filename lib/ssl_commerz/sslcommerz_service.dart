@@ -1,3 +1,6 @@
+import 'dart:convert';
+
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -12,6 +15,7 @@ import 'package:flutter_sslcommerz/sslcommerz.dart';
 import 'package:get/get.dart';
 import 'package:paikarilimited_quicktech/Boilerplate/boilerplateCheckOutScreen.dart';
 import 'package:paikarilimited_quicktech/Controllers/provider/cartprovider.dart';
+import 'package:paikarilimited_quicktech/main.dart';
 import 'package:paikarilimited_quicktech/widgets/loading_dialog.dart';
 import 'package:provider/provider.dart';
 
@@ -70,6 +74,7 @@ Future<void> sslCommerzService({
         result.code);
   } else {
     SSLCTransactionInfoModel model = result;
+    updateOrderAfterPayment(orderId: "$orderId");
     Fluttertoast.showToast(
         msg: "Transaction successful: Amount ${model.amount} TK",
         toastLength: Toast.LENGTH_SHORT,
@@ -78,6 +83,7 @@ Future<void> sslCommerzService({
         backgroundColor: Colors.black,
         textColor: Colors.white,
         fontSize: 16.0);
+
     Provider.of<CartProvider>(context, listen: false).clearCart();
     Get.off(() => BoilerplateChekOutScreen(
           orderid: orderId,
@@ -99,4 +105,30 @@ Future<void> sslCommerzGeneralCall() async {
           total_amount: 5000,
           tran_id: "1231321321321312"));
   sslcommerz.payNow();
+}
+
+updateOrderAfterPayment({String? orderId}) async {
+  final dio = Dio();
+
+  String url = "https://paikarilimited.com/wp-json/wc/v3/orders/$orderId";
+  var auth = 'Basic ' +
+      base64Encode(
+        utf8.encode('$woocommerceusername:$woocommercepassword'),
+      );
+
+  try {
+    final response = await dio.put(url,
+        data: {"set_paid": true},
+        options: Options(
+          headers: <String, String>{'authorization': auth},
+        ));
+    if (response.statusCode == 200) {
+      Fluttertoast.showToast(msg: "Order Payment Status Updated.");
+    } else {
+      Fluttertoast.showToast(msg: "Something went wrong");
+    }
+  } catch (e) {
+    print(e);
+    Fluttertoast.showToast(msg: "An unknown error has occured");
+  }
 }
